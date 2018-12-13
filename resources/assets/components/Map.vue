@@ -14,7 +14,9 @@ export default {
 
     var marker = L.marker([lat, long])
       .addTo(myMap)
-      .bindPopup(`<h2> Initial Location </h2> lat:<b>${lat}</b>, long:<b>${long}</b>`);
+      .bindPopup(
+        `<h2> Initial Location </h2> lat:<b>${lat}</b>, long:<b>${long}</b>`
+      );
 
     var circle = L.circle([lat, long], {
       color: "red",
@@ -69,49 +71,42 @@ export default {
         fillOpacity: 0.5,
         radius: 500
       }).addTo(myMap);
-
-      /* lat = parseFloat(lat);
-      long = parseFloat(long);
-
-      var marker = L.marker([lat, long]).addTo(myMap);
-
-      marker.bindPopup(`<h2> Your Position </h2> lat:${lat}, long:${long}`);
-
-      var circle = L.circle([lat, long], {
-        color: "red",
-        fillColor: "#f03",
-        fillOpacity: 0.5,
-        radius: 500
-      }).addTo(myMap); */
     });
 
     this.sendLocation();
   },
   methods: {
     loadLocations(map) {
-      axios.get("locations").then(res => {
-        // const myMap = L.map("map");
+      axios
+        .get("locations")
+        .then(res => {
+          // const myMap = L.map("map");
 
-        console.log(res.data);
+          console.log(res.data);
 
-        res.data.forEach(location => {
-          // alert("location");
-          let { lat, long } = location; //ES6 DESTRUCTURING
-          lat = parseFloat(lat);
-          long = parseFloat(long);
+          res.data.forEach(location => {
+            // alert("location");
+            let { lat, long } = location; //ES6 DESTRUCTURING
+            lat = parseFloat(lat);
+            long = parseFloat(long);
 
-          var marker = L.marker([lat, long])
-            .addTo(map)
-            .bindPopup(`<h2> Position </h2> lat:${lat}, long:${long}`);
+            var marker = L.marker([lat, long])
+              .addTo(map)
+              .bindPopup(
+                `<h2> Position </h2> lat:<b>${lat}</b>, long:<b>${long}</b>`
+              );
 
-          var circle = L.circle([lat, long], {
-            color: "red",
-            fillColor: "#f03",
-            fillOpacity: 0.5,
-            radius: 500
-          }).addTo(map);
+            var circle = L.circle([lat, long], {
+              color: "red",
+              fillColor: "#f03",
+              fillOpacity: 0.5,
+              radius: 500
+            }).addTo(map);
+          });
+        })
+        .catch(err => {
+          console.log(err);
         });
-      }).catch((err) => {console.log(err)});
     },
 
     sendLocation() {

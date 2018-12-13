@@ -1,31 +1,33 @@
-# Adonis fullstack application
+## Realtime search feature with Pusher.
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+A realtime map built with Vue, Leaflet and Pusher Channels
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
-
-## Setup
-
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick
-```
-
-or manually clone the repo and then run `npm install`.
+![application screenshot](public/images/live_comments_adonis_pusher.gif "A realtime map built with Vue, Leaflet and Pusher Channels.")
 
 
-### Migrations
+## Getting Started
+Make sure you have `npm` and `yarn` on your local machine
 
-Run the following command to run startup migrations.
+1.  Clone this repository and cd into it
+2.  Run `yarn` or `npm install` to download dependencies
+3.  Set up your [pusher account](https://dashboard.pusher.com/accounts/sign_up)
+4.  Set up your database in your `.env` file and run php `adonis migration:run`
+5.  Execute `npm run asset-dev` to build project assets
+6.  Execute `adonis serve --dev` to run the project in your browser
+7.  See the [tutorial](https://pusher.com/tutorials/live-commenting-adonis-vue) for useful notes 
 
-```js
-adonis migration:run
-```
+### Prerequisites
+
+* Adonis
+* Vue
+* Vuex
+* npm or Yarn
+* Pusher account
+
+## Built With
+
+* [Pusher channels](https://pusher.com/channels) - Pusher Channels
+* [Adonis](https://adonisjs.com/) - Beautiful Php framework
+* [Vue](https://vuejs.org/) - A Great reactive Js framework
+* [Leaflet](https://leafletjs.com/) - A JS library for mobile-friendly interactive maps
+* [Axios](https://vuejs.org/) - A Js library to handle ajax requests easily

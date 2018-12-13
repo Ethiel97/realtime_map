@@ -1818,16 +1818,6 @@ __webpack_require__.r(__webpack_exports__);
         fillOpacity: 0.5,
         radius: 500
       }).addTo(myMap);
-      /* lat = parseFloat(lat);
-      long = parseFloat(long);
-       var marker = L.marker([lat, long]).addTo(myMap);
-       marker.bindPopup(`<h2> Your Position </h2> lat:${lat}, long:${long}`);
-       var circle = L.circle([lat, long], {
-        color: "red",
-        fillColor: "#f03",
-        fillOpacity: 0.5,
-        radius: 500
-      }).addTo(myMap); */
     });
     this.sendLocation();
   },
@@ -1843,7 +1833,7 @@ __webpack_require__.r(__webpack_exports__);
 
           lat = parseFloat(lat);
           long = parseFloat(long);
-          var marker = L.marker([lat, long]).addTo(map).bindPopup("<h2> Position </h2> lat:".concat(lat, ", long:").concat(long));
+          var marker = L.marker([lat, long]).addTo(map).bindPopup("<h2> Position </h2> lat:<b>".concat(lat, "</b>, long:<b>").concat(long, "</b>"));
           var circle = L.circle([lat, long], {
             color: "red",
             fillColor: "#f03",

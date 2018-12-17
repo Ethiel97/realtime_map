@@ -2,7 +2,7 @@
 
 A realtime map built with Vue, Leaflet and Pusher Channels
 
-![application screenshot](public/images/live_comments_adonis_pusher.gif "A realtime map built with Vue, Leaflet and Pusher Channels.")
+![application screenshot](public/images/realtime_map_demo.gif "A realtime map built with Vue, Leaflet and Pusher Channels.")
 
 
 ## Getting Started

@@ -10,7 +10,7 @@ export default {
       long = -0.03;
     const myMap = L.map("map").setView([lat, long], 13);
 
-    myMap.add;
+    // myMap.add;
 
     var marker = L.marker([lat, long])
       .addTo(myMap)
@@ -133,6 +133,6 @@ export default {
 <style scoped>
 #map {
   width: 100%;
-  height: 400px;
+  height: 600px;
 }
 </style>

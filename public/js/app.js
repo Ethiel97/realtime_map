@@ -1772,8 +1772,8 @@ __webpack_require__.r(__webpack_exports__);
     // const myMap = L.map('map');
     var lat = 51.505,
         long = -0.03;
-    var myMap = L.map("map").setView([lat, long], 13);
-    myMap.add;
+    var myMap = L.map("map").setView([lat, long], 13); // myMap.add;
+
     var marker = L.marker([lat, long]).addTo(myMap).bindPopup("<h2> Initial Location </h2> lat:<b>".concat(lat, "</b>, long:<b>").concat(long, "</b>"));
     var circle = L.circle([lat, long], {
       color: "red",
@@ -1878,7 +1878,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#map[data-v-5a852ac7] {\n  width: 100%;\n  height: 400px;\n}\n", ""]);
+exports.push([module.i, "\n#map[data-v-5a852ac7] {\n  width: 100%;\n  height: 600px;\n}\n", ""]);
 
 // exports
 
